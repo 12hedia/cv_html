@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>formulaire</title>
+
+<style>
+
+body{
+
+background-color: rgb(3, 3, 3);
+
+font-size: large;
+
+color: rgb(255, 255, 255);
+
+
+
+    }
+    @supports (background: paint(houdini)) {
+  @property --opacity {
+    syntax: "<number>";
+    initial-value: 0.5;
+    inherits: false;
+  }
+
+  @property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+
+  @keyframes opacityChange {
+    to {
+      --opacity: 1;
+    }
+  }
+
+  @keyframes rotate {
+    to {
+      --angle: 360deg;
+    }
+  }}
+.border{
+position: absolute;
+  animation: rotate 6s linear infinite, opacityChange 3s infinite alternate;
+
+  width: 93%;
+  height: 86%;
+  border-radius: 15px;
+  padding: 2rem;
+ 
+  font-size: 1.5em;
+
+  --border-size: 0.3rem;
+  border: var(--border-size) solid transparent;
+
+  /* Paint an image in the border */
+  border-image: conic-gradient(
+      from var(--angle),
+      #f211fa 0deg 70deg,
+      #fbb300 90deg 140deg,
+     
+      #7a1205 270deg 280deg,
+      #533999 270deg 540deg
+  
+    )
+    1 stretch;
+
+}
+
+    #if1{
+
+        width: 99%;
+position: absolute;
+        height: 20%;
+        left: 0px;
+
+    }
+
+    #if2{
+
+        width: 30.3%;
+        position: relative;
+        height: 400px; 
+        left: -10px;
+        top: 25%;
+    }
+
+    #if3{
+
+        width: 68.2%;
+        position: relative;
+        height: 400px;
+      
+        top: 25%;
+    }
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+iframe {
+border: none;
+
+}
+</style>
+
+</head>
+
+<body>
+<div class="border">
+  <iframe src="entete.html" id="if1" scrolling="no"  ></iframe>
+
+  <iframe src="formulaire.html" id="if2" scrolling="auto"></iframe>
+
+  <iframe src="mypage.html" id="if3" scrolling="auto"></iframe>
+</div>
+</body>
+
+</html>

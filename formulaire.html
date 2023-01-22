@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>formulaire</title>
+
+<style>
+
+body{
+
+
+
+font-size: large;
+
+color: rgb(255, 255, 255);
+
+    }
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input[type=date] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input {
+  border: none;
+  border-radius: 5px;
+}
+
+
+input[type=submit], input[type=reset] {
+  background-color: white;
+  border: none;
+  color:#ff1361 ;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+
+}
+
+
+#div1{
+
+  width:240px;
+  height: 200px;
+  border: 1px solid #333;
+  box-shadow: 8px 8px 5px #444;
+  color: #333;
+display: none;
+  padding: 8px 12px;
+  background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+
+}
+
+</style>
+
+<script>
+
+
+function myFunctio() {
+
+  var table = document.createElement("table");
+  var tabbody = document.createElement("tbody");
+    var row = document.createElement("tr");
+    var concol1= document.createTextNode(" Nom : ");
+    var col1= document.createElement("td"); 
+    var nom = document.getElementById('nom').value;
+    var concol2= document.createTextNode(nom);
+    var col2= document.createElement("td"); 
+    col1.appendChild(concol1);
+    col2.appendChild(concol2);
+    row.appendChild(col1);
+    row.appendChild(col2);
+    tabbody.appendChild(row);
+
+var row1 = document.createElement("tr");
+    var concol3= document.createTextNode(" prenom : ");
+    var col3= document.createElement("td"); 
+    var prenom = document.getElementById('prenom').value;
+    var concol4= document.createTextNode(prenom);
+    var col4= document.createElement("td"); 
+    col3.appendChild(concol3);
+    col4.appendChild(concol4);
+    row1.appendChild(col3);
+    row1.appendChild(col4);
+   tabbody.appendChild(row1);
+
+
+var row2 = document.createElement("tr");
+    var concol5= document.createTextNode(" Date n : ");
+    var col5= document.createElement("td"); 
+    var datee = document.getElementById('dat').value; 
+    var concol6= document.createTextNode(datee);
+    var col6= document.createElement("td"); 
+    col5.appendChild(concol5);
+    col6.appendChild(concol6);
+    row2.appendChild(col5);
+    row2.appendChild(col6);
+    tabbody.appendChild(row2);
+
+
+var row3 = document.createElement("tr");
+    var concol7= document.createTextNode(" Email : ");
+    var col7= document.createElement("td"); 
+    var email = document.getElementById('mail').value;
+    var concol8= document.createTextNode(email);
+    var col8= document.createElement("td"); 
+    col7.appendChild(concol7);
+    col8.appendChild(concol8);
+    row3.appendChild(col7);
+    row3.appendChild(col8);
+    tabbody.appendChild(row3);
+
+
+    var row6 = document.createElement("tr");
+    var concol13= document.createTextNode(" controle :   ");
+    var col13= document.createElement("td"); 
+    var concol14= document.createTextNode(" tout les champs sont obligatoir \n date et de type date \n email est type email \n  1 seul lieu doit etre coché");
+    var col14= document.createElement("td"); 
+    col13.appendChild(concol13);
+    col14.appendChild(concol14);
+    row6.appendChild(col13);
+    row6.appendChild(col14);
+    tabbody.appendChild(row6);
+
+    table.appendChild(tabbody);
+    table.style.fontSize="15px";
+table.setAttribute("border", "1");
+var div=document.getElementById('div1') ;
+div.appendChild(table);
+div.style.display='block' ;
+    var lieu = document.getElementsByName('aa');
+ 
+    var a = document.getElementById('a');
+  var b = document.getElementById('b');
+  var k ="";
+  if(a.checked == true){
+ k= document.getElementById('a').value;
+  }else{
+    if (b.checked==true){
+ k= document.getElementById('b').value;
+    }
+  }
+alert(k);
+ 
+
+ 
+
+
+    alert(email);
+
+
+   
+
+
+ 
+ 
+ 
+
+}
+
+</script>
+
+
+
+</head>
+
+<body>
+
+    
+
+    <form action="mailto:hiii.mefteh@gmail.com" method="post" >
+
+        <h2><fieldset> <legend>~information ~</legend> 
+
+            Nom :                        <input type="text"  id="nom" name="vnom" required><br>
+
+                   <br>  
+
+                    Prenom :                   <input type="text" id="prenom" name="vprenom" required><br>
+
+           <br>
+
+                      date de naissence :     <input type="date"  id="dat" name="date" required><br>
+
+           
+
+           <br>
+
+           
+
+                     email : <input type="text" id="mail"  name="vemail" required><br>
+
+           <br></fieldset>
+
+                  <fieldset><legend>~ lieu :~</legend> 
+
+           <input type="radio" value="TUNIS" name="aa" required>tunis
+
+           <input type="radio" value="MONASTIR" name="aa" required>monastir
+<br>
+           <input type="radio" value="SOUSSE" name="aa" required>sousse
+
+           <input type="radio" value="SFAX" name="aa" required>sfax 
+
+            </fieldset>
+
+           
+
+           
+
+           <h2><fieldset> <legend>~sexe ~</legend> 
+
+           
+
+           <input type="CHECKBOX" value="v17" name="a">FEMME
+
+           <input type="CHECKBOX" value="v18" name="b">HOMME
+
+            </legend> 
+
+           </fieldset> 
+           <br>
+               <center>
+           <input type="submit" value="Envoyer" name="b1" size="15" onclick="myFunctio()" >
+              &nbsp;    &nbsp; 
+           <input type="reset" value="Annule" name="b2" size="15">
+               </center>
+          
+
+           </fieldset>
+
+          
+
+    </form>
+
+
+
+    <div id="div1">
+
+    </div>
+
+</body>
+
+
+
+
+
+</html>

@@ -1,0 +1,91 @@
+var array =[nom , prenom , dat , email , lieu ,  k ]
+
+  var table = document.createElement("table");
+  var tabbody = document.createElement("tbody");
+    var row = document.createElement("tr");
+    var concol1= document.createTextNode(" Nom : ");
+    var col1= document.createElement("td"); 
+    var concol2= document.createTextNode(array[0]);
+    var col2= document.createElement("td"); 
+    col1.appendChild(concol1);
+    col2.appendChild(concol2);
+    row.appendChild(col1);
+    row.appendChild(col2);
+    tabbody.appendChild(row);
+
+    var row1 = document.createElement("tr");
+    var concol3= document.createTextNode(" prenom : ");
+    var col3= document.createElement("td"); 
+    var concol4= document.createTextNode(array[1]);
+    var col4= document.createElement("td"); 
+    col3.appendChild(concol3);
+    col4.appendChild(concol4);
+    row1.appendChild(col3);
+    row1.appendChild(col4);
+   tabbody.appendChild(row1);
+
+
+    var row2 = document.createElement("tr");
+    var concol5= document.createTextNode(" Date n : ");
+    var col51= document.createElement("td"); 
+    var concol6= document.createTextNode(array[2]);
+    var col6= document.createElement("td"); 
+    col5.appendChild(concol5);
+    col6.appendChild(concol6);
+    row2.appendChild(col1);
+    row2.appendChild(col2);
+    tabbody.appendChild(row2);
+
+    var row3 = document.createElement("tr");
+    var concol7= document.createTextNode(" Email : ");
+    var col7= document.createElement("td"); 
+    var concol8= document.createTextNode(array[3]);
+    var col8= document.createElement("td"); 
+    col7.appendChild(concol7);
+    col8.appendChild(concol8);
+    row3.appendChild(col7);
+    row3.appendChild(col8);
+    tabbody.appendChild(row3);
+
+
+    var row4 = document.createElement("tr");
+    var concol9= document.createTextNode(" lieu : ");
+    var col9= document.createElement("td"); 
+    var concol10= document.createTextNode(array[4]);
+    var col10= document.createElement("td"); 
+    col9.appendChild(concol9);
+    col10.appendChild(concol10);
+    row4.appendChild(col9);
+    row4.appendChild(col10);
+    tabbody.appendChild(row4);
+
+
+
+    var row5 = document.createElement("tr");
+    var concol11= document.createTextNode(" sexe : ");
+    var col11= document.createElement("td"); 
+    var concol12= document.createTextNode(array[5]);
+    var col12= document.createElement("td"); 
+    col11.appendChild(concol11);
+    col12.appendChild(concol12);
+    row5.appendChild(col11);
+    row5.appendChild(col12);
+    tabbody.appendChild(row5);
+
+
+
+    var row6 = document.createElement("tr");
+    var concol13= document.createTextNode(" controle  ");
+    var col13= document.createElement("td"); 
+    var concol14= document.createTextNode("");
+    var col14= document.createElement("td"); 
+    col13.appendChild(concol13);
+    col14.appendChild(concol14);
+    row6.appendChild(col13);
+    row6.appendChild(col14);
+    tabbody.appendChild(row6);
+
+alert(nom);
+    table.appendChild(tabbody);
+var div=document.getElementById('div1').value ;
+div.appendChild(table);
